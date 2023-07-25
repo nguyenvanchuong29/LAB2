@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+int main(){
+	long start,end;
+	long tien1,tien2,tien3;
+	long accesstime;
+	float tong=0;
+	cout<<"gio bat dau la: ";
+	cin>>start;
+	cout<<"gio ket thuc la: ";
+	cin>>end;
+	if((start>=0)&&(end<=24)){
+		if((start>0)&&(end<=7)){
+			tien1=300;
+			tong=(end-start)*tien1;
+			if((end-start)<7){
+				tong=tong-(tong*0.15);
+			}
+			cout<<"thoi gian truy cap 1= "<<tong<<endl;
+		}
+		else if(end>7){
+			tien1=300;
+			tong=(end-start)*tien1;
+			if((end-start)>7){
+				tong=tong-(tong*0.15);
+			}
+			cout<<"thoi gian truy cap 1= "<<tong<<endl;
+		}
+		if((end>7)&&(end<=17)){
+			tien2=400;
+			tong=tong+((end-start)*tien2);
+			if((end-start)>6){
+				tong=tong-(tong*0.1);
+			}
+			cout<<"thoi gian truy cap 2= "<<tong<<endl;
+			
+		}
+		else if(end>=17){
+			tien2=400;
+			tong=tong+((end-start)*tien2);
+			if((end-start)>6){
+				tong=tong-(tong*0.1);
+			}
+			cout<<"thoi gian truy cap 2= "<<tong<<endl;
+				
+			}
+		if((end>17)&&(end<=24)){
+			tien3=350;
+			tong=tong+((end-start)*tien3);
+			if((end-start)>4){
+				tong=tong-(tong*0.12);
+			}
+			cout<<"thoi gian truy cap 3=  "<<tong;
+		}
+	}
+	return 0;
+}
